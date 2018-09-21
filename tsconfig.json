@@ -15,11 +15,12 @@
     ],
     "lib": [
       "es2017",
-      "dom"
+      "dom",
+      "esnext.asynciterable"
     ],
     "paths": {
-      "backend": [
-        "dist/backend"
+      "@gcc/backend": [
+        "libs/backend/src/public_api.ts"
       ],
       "backend/*": [
         "dist/backend/*"
