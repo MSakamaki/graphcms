@@ -17,8 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "deployUrl": "graphcms",
-            "baseHref": "/",
+            "baseHref": "/graphcms",
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -56,7 +55,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "baseHref": "graphcms",
+            "baseHref": "/graphcms",
             "browserTarget": "gcc:build"
           },
           "configurations": {
