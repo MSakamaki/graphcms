@@ -17,9 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "deployUrl": "/graphcms/",
-            "baseHref": "/graphcms",
-            "outputPath": "docs",
+            "outputPath": "dist/gcc",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,12 +27,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/prismjs/themes/prism-okaidia.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/marked/lib/marked.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-javascript.min.js",
+              "node_modules/prismjs/components/prism-css.min.js"
+            ]
           },
           "configurations": {
             "production": {
+              "outputPath": "docs",
+              "deployUrl": "/graphcms/",
+              "baseHref": "/graphcms",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -56,7 +63,6 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "baseHref": "/graphcms",
             "browserTarget": "gcc:build"
           },
           "configurations": {
