@@ -1,10 +1,8 @@
-<h1>Example</h1>
 
-<section *ngFor="let content of contents$ | async">
- <div> {{ content.title }}  </div>
- <div> {{ content.author }}</div>
- <markdown [data]="content.content"></markdown>
-</section>
-
+<nav class="header-nav">
+  <a [routerLink]="['home']">HOME</a>
+  <a [routerLink]="['archives']">ARCHIVES</a>
+  <a [routerLink]="['about']">ABOUT</a>
+</nav>
 
 <router-outlet></router-outlet>

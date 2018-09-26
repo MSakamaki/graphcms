@@ -1,0 +1,14 @@
+<div>
+  <h2>最新の投稿です</h2>
+</div>
+
+<ng-container *ngIf="loading$ | async; else elseTemplate">
+  ロード中...
+</ng-container>
+<ng-template #elseTemplate>
+  <section *ngFor="let contribute of contents$ | async">
+    <div> {{ contribute.title }} </div>
+    <div> {{ contribute.author }}</div>
+    <markdown [data]="contribute.content"></markdown>
+  </section>
+</ng-template>

@@ -1,27 +1,38 @@
-# Gcc
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+### init
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+# build
+npm run build:ssr
+npm run serve:ssr
 
-## Code scaffolding
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+    "../libs/content-home/src/public_api.ts",
+    "../libs/content-archives/src/public_api.ts",
+    "../libs/content-about/src/public_api.ts"
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### COMMAND
 
-## Running unit tests
+```sh
+ng new gcc --style=scss --routing --new-project-root=libs
+ng g library backend
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ng g library content-home
+ng g library content-archives
+ng g library content-about
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+# ng add apollo-angular --project=backend
+# https://www.apollographql.com/docs/angular/basics/setup.html
+ng g service graphql/content --project=backend
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ng g component top-page --project=content-home
+ng g component content --project=content-archives
+
+ng generate universal --client-project=gcc
+
+```

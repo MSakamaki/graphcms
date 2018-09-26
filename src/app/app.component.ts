@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentService, Contents } from '@gcc/backend';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
-  contents$: Observable<Contents[]>;
-
-  constructor(private content: ContentService) {}
+  constructor(
+    ) {}
 
   ngOnInit() {
-    this.contents$ = this.content.get();
   }
 }

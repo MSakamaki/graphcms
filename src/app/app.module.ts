@@ -4,15 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MarkdownModule } from 'ngx-markdown';
-import { BackendModule } from '@gcc/backend';
+import { NotfoundComponent } from './page/notfound/notfound.component';
+import { CommonModule } from '@angular/common';
+import { BackendModule } from 'backend';
+// import { BackendModule } from '../../libs/backend/src/lib/backend.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotfoundComponent
   ],
   imports: [
+    CommonModule,
     AppRoutingModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BackendModule,
     MarkdownModule.forRoot(),
   ],

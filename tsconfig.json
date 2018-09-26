@@ -19,11 +19,29 @@
       "esnext.asynciterable"
     ],
     "paths": {
-      "@gcc/backend": [
-        "libs/backend/src/public_api.ts"
+      "backend": [
+        "libs/backend/src/public_api.ts",
+        "../libs/backend/src/public_api.ts",
+        "../../libs/backend/src/public_api.ts",
+        "../../../libs/backend/src/public_api.ts"
       ],
-      "backend/*": [
-        "dist/backend/*"
+      "content-home": [
+        "libs/content-home/src/public_api.ts",
+        "../libs/content-home/src/public_api.ts",
+        "../../libs/content-home/src/public_api.ts",
+        "../../../libs/content-home/src/public_api.ts",
+      ],
+      "content-archives": [
+        "libs/content-archives/src/public_api.ts",
+        "../libs/content-archives/src/public_api.ts",
+        "../../libs/content-archives/src/public_api.ts",
+        "../../../libs/content-archives/src/public_api.ts",
+      ],
+      "content-about": [
+        "libs/content-about/src/public_api.ts",
+        "../libs/content-about/src/public_api.ts",
+        "../../libs/content-about/src/public_api.ts",
+        "../../../libs/content-about/src/public_api.ts",
       ]
     }
   }
