@@ -1,4 +1,10 @@
 
+
+### subscribe issues
+
+https://github.com/guess-js/guess/issues/79
+
+
 ### init
 
 
@@ -8,11 +14,6 @@ npm run build:ssr
 npm run serve:ssr
 
 ```
-
-
-    "../libs/content-home/src/public_api.ts",
-    "../libs/content-archives/src/public_api.ts",
-    "../libs/content-about/src/public_api.ts"
 
 ### COMMAND
 
